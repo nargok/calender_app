@@ -7,6 +7,10 @@ class CustomDate {
     this.date = date.getDate()
     this.day = date.getDay()
   }
+
+  formatDate(separator = '/') {
+    return [this.year, this.manth + 1, this.date].join(separator)
+  }
 }
 
 export default CustomDate;

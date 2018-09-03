@@ -3,8 +3,8 @@ import _ from 'lodash';
 
  class DateList extends Component {
   render() {
-    const dateList = _.map(this.props.dateList, (date) => {
-      return <td>{date.date}</td>
+    const dateList = _.map(this.props.dateList, (date, index) => {
+      return <td key={index}>{date.date}</td>
     })
 
     return (

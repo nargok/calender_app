@@ -13,7 +13,7 @@ class WeekList extends Component {
     let weekList = []
     const firstDay = new CustomDate(current.year, current.month, 1).day;
     const WEEK_START_DAY = 0; // Sunday
-    let dateCount = firstDay === WEEK_START_DAY ? 1 : 1 - firstDay + WEEK_START_DAY; // これ、なにやってるんだろう？
+    let dateCount = firstDay === WEEK_START_DAY ? 1 : 1 - firstDay + WEEK_START_DAY;
     dateCount = dateCount > 1 ? dateCount - 7 : dateCount;
     _.times(6, (week) => {
       weekList.push([])
@@ -28,8 +28,8 @@ class WeekList extends Component {
   }
 
   render() {
-    const weekList = _.map(this.getWeekList(), (dateList) => {
-      return <DateList dateList={dateList} />
+    const weekList = _.map(this.getWeekList(), (dateList, index) => {
+      return <DateList key={index} dateList={dateList} />
     })
 
     return (
