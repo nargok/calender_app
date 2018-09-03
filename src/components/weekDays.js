@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 
 
-const WEEKDAYS = () => {
+const WeeKDays = () => {
   const WEEK_DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
   let weekDays = _.map(WEEK_DAYS, (day, index) => <th key={index}>{day}</th>)
 
@@ -13,4 +13,4 @@ const WEEKDAYS = () => {
   )
 }
 
-export default WEEKDAYS;
+export default WeeKDays;
