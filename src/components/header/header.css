@@ -1,7 +1,9 @@
-.left-arrow {
+.left-arrow:hover {
   cursor: pointer;
+  background-color: #ddd;
 }
 
-.right-arrow {
+.right-arrow:hover {
   cursor: pointer;
+  background-color: #ddd;
 }
