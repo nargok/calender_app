@@ -6,7 +6,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 import CustomDate from './components/customDate';
-import Header from './components/header';
+import Header from './components/header/header';
 import WeeKDays from './components/weekDays';
 import WeekList from './components/weekList';
 

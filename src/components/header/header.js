@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './header.css';
 
 class Header extends Component {
   render() {
@@ -6,7 +7,8 @@ class Header extends Component {
     return (
       <div>
         <h2>
-          <span>&lt; </span><span>&gt; </span>
+          <span className="left-arrow">&lt; </span>
+          <span className="right-arrow">&gt; </span>
            {currentMonth}
         </h2>
       </div>
