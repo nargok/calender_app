@@ -5,7 +5,10 @@ class Header extends Component {
     const currentMonth = this.props.current.formatDate()
     return (
       <div>
-        <h2>{currentMonth}</h2>
+        <h2>
+          <span>&lt; </span><span>&gt; </span>
+           {currentMonth}
+        </h2>
       </div>
     )
   }
