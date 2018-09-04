@@ -6,6 +6,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 import CustomDate from './components/customDate';
+import Header from './components/header';
 import WeeKDays from './components/weekDays';
 import WeekList from './components/weekList';
 
@@ -21,6 +22,7 @@ class Calender extends Component {
     return (
       <React.Fragment>
         <h1>Hello</h1>
+        <Header current={this.state.current} />
         <table>
           <WeeKDays />
           <WeekList current={this.state.current} />

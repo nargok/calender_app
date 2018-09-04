@@ -9,7 +9,7 @@ class CustomDate {
   }
 
   formatDate(separator = '/') {
-    return [this.year, this.manth + 1, this.date].join(separator)
+    return [this.year, this.month + 1, this.date].join(separator)
   }
 }
 
