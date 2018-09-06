@@ -27,17 +27,47 @@ class Calender extends Component {
   }
 
   moveLastMonth = () => {
-    this.moveMonth(--this.state.current.month)
+    const prevMonth = this.state.current.month - 1;
+    this.moveMonth(prevMonth);
   }
 
   moveNextMonth = () => {
-    this.moveMonth(++this.state.current.month)
+    const nextMonth = this.state.current.month + 1;
+    this.moveMonth(nextMonth);
+  }
+
+  optionLoop = (start, end) => {
+    let i, opt;
+    opt = [];
+
+    for (i = start; i <= end; i++) {
+      opt.push(i);
+    }
+    return opt;
   }
 
   render() {
+    // 年の選択肢を定義
+    const year_array = this.optionLoop(1950, this.state.current.year);
+    const year_items = year_array.map((year, index) => {
+      return <option key={index} value={year}>{year}</option>
+    })
+
+    const month_array = this.optionLoop(1, 12);
+    const month_items = month_array.map((month, index) => {
+      return <option key={index} value={month} >{month}</option>
+    })
+
     return (
       <React.Fragment>
         <h1>Hello</h1>
+        <select name="year" id="id_year" defaultValue={this.state.current.year}>
+          {year_items}
+        </select>
+        <select name="month" id="id_month" defaultValue={this.state.current.month + 1}>
+          {month_items}
+        </select>
+
         <Header
           current={this.state.current}
           lastMonth={this.moveLastMonth}

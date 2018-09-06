@@ -5,6 +5,7 @@ class Header extends Component {
   render() {
     const currentMonth = this.props.current.formatDate()
     return (
+      // ここをinline-blockにする
       <div>
         <h2>
           <span
