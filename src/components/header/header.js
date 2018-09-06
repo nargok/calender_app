@@ -7,8 +7,11 @@ class Header extends Component {
     return (
       <div>
         <h2>
-          <span className="left-arrow">&lt; </span>
-          <span className="right-arrow">&gt; </span>
+          <span
+           className="left-arrow"
+           onClick={this.props.lastMonth}
+          >&lt; </span>
+          <span className="right-arrow" onClick={this.props.nextMonth}>&gt; </span>
            {currentMonth}
         </h2>
       </div>

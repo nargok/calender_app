@@ -18,11 +18,31 @@ class Calender extends Component {
     }
   }
 
+  moveMonth = (month) => {
+    const current = this.state.current
+    const newDate = new CustomDate(
+      current.year, month, current.date
+    )
+    this.setState({ current: newDate })
+  }
+
+  moveLastMonth = () => {
+    this.moveMonth(--this.state.current.month)
+  }
+
+  moveNextMonth = () => {
+    this.moveMonth(++this.state.current.month)
+  }
+
   render() {
     return (
       <React.Fragment>
         <h1>Hello</h1>
-        <Header current={this.state.current} />
+        <Header
+          current={this.state.current}
+          lastMonth={this.moveLastMonth}
+          nextMonth={this.moveNextMonth}
+        />
         <table>
           <WeeKDays />
           <WeekList current={this.state.current} />
