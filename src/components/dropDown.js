@@ -33,7 +33,7 @@ class DropDown extends Component {
   handleDisplayButton = () => {
     const year = this.isNull(this.state.year) ? this.props.current.year : this.state.year;
     const month = this.isNull(this.state.month) ? this.props.current.month : this.state.month - 1;
-    this.props.moveMonth(year, month)
+    this.props.moveMonth(year, month);
   }
 
   isNull = (object) => {

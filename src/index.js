@@ -19,7 +19,6 @@ class Calender extends Component {
     }
   }
 
-  // moveMonthを拡張するか　yearが何もなければ初期値にcurrent.yearを入れる
   moveMonth = (year, month) => {
     const current = this.state.current
     const newDate = new CustomDate(
@@ -51,6 +50,7 @@ class Calender extends Component {
           current={this.state.current}
           lastMonth={this.moveLastMonth}
           nextMonth={this.moveNextMonth}
+          moveMonth={this.moveMonth}
         />
         <table>
           <WeeKDays />

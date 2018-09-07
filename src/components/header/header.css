@@ -1,3 +1,17 @@
+.today_button {
+  display: inline-block;
+  background-color: rgba(0,0,0,0.04);
+}
+
+.today_button:hover {
+  cursor: pointer;
+  background-color: rgba(0,0,0,0.1);
+}
+
+.header {
+  display: inline-block;
+}
+
 .left-arrow:hover {
   cursor: pointer;
   background-color: #ddd;
