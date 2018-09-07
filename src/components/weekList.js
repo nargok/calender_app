@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 
 import CustomDate from './customDate';
-import DateList from './dateList';
+import DateList from '../dateList/dateList';
 
 class WeekList extends Component {  
   getWeekList() {

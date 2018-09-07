@@ -1,0 +1,6 @@
+.date:hover {
+  background-color: orange;
+  font-weight: bold;
+  cursor: pointer;
+  color: #FFF;
+}
