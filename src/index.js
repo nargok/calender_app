@@ -19,29 +19,34 @@ class Calender extends Component {
     }
   }
 
-  moveMonth = (month) => {
+  // moveMonthを拡張するか　yearが何もなければ初期値にcurrent.yearを入れる
+  moveMonth = (year, month) => {
     const current = this.state.current
     const newDate = new CustomDate(
-      current.year, month, current.date
+      year, month, current.date
     )
     this.setState({ current: newDate })
   }
 
   moveLastMonth = () => {
+    const currentYear = this.state.current.year
     const prevMonth = this.state.current.month - 1;
-    this.moveMonth(prevMonth);
+    this.moveMonth(currentYear, prevMonth);
   }
 
   moveNextMonth = () => {
+    const currentYear = this.state.current.year
     const nextMonth = this.state.current.month + 1;
-    this.moveMonth(nextMonth);
+    this.moveMonth(currentYear, nextMonth);
   }
 
   render() {
     return (
       <React.Fragment>
         <h1>Hello</h1>
-        <DropDown current={this.state.current} />
+        <DropDown
+          current={this.state.current}
+          moveMonth={this.moveMonth}/>
         <Header
           current={this.state.current}
           lastMonth={this.moveLastMonth}

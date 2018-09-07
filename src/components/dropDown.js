@@ -1,6 +1,14 @@
 import React, { Component } from 'react'
 
 class DropDown extends Component {
+  constructor() {
+    super()
+    this.state = {
+      year: null,
+      month: null
+    }
+  }
+
   optionLoop = (start, end) => {
     let i, opt;
     opt = [];
@@ -18,23 +26,40 @@ class DropDown extends Component {
     return items;
   }
 
+  handleChangeDropdown = (e) => {
+    this.setState({ [e.target.name]: e.target.value})
+  }
+
+  handleDisplayButton = () => {
+    const year = this.isNull(this.state.year) ? this.props.current.year : this.state.year;
+    const month = this.isNull(this.state.month) ? this.props.current.month : this.state.month - 1;
+    this.props.moveMonth(year, month)
+  }
+
+  isNull = (object) => {
+    return (object === null);
+  }
+
   render() {
-    // 年の選択肢を定義
     const year_array = this.optionLoop(1950, this.props.current.year);
     const year_items = this.generateOptions(year_array);
-
     const month_array = this.optionLoop(1, 12);
     const month_items = this.generateOptions(month_array);
     
     return (
       <div>
         <h3>年月選択</h3>
-        <select name="year" id="id_year" defaultValue={this.props.current.year}>
+        <select name="year"
+          defaultValue={this.props.current.year}
+          onChange={this.handleChangeDropdown}>
           {year_items}
         </select>
-        <select name="month" id="id_month" defaultValue={this.props.current.month + 1}>
+        <select name="month"
+          defaultValue={this.props.current.month + 1}
+          onChange={this.handleChangeDropdown}>
           {month_items}
         </select>
+        <button onClick={this.handleDisplayButton}>表示</button>
       </div>
     )
   }
