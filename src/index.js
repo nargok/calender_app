@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import _ from 'lodash';
-// import './index.css';
+import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -43,19 +43,56 @@ class Calender extends Component {
     return (
       <React.Fragment>
         <h1>Hello</h1>
-        <DropDown
-          current={this.state.current}
-          moveMonth={this.moveMonth}/>
-        <Header
-          current={this.state.current}
-          lastMonth={this.moveLastMonth}
-          nextMonth={this.moveNextMonth}
-          moveMonth={this.moveMonth}
-        />
-        <table>
-          <WeeKDays />
-          <WeekList current={this.state.current} />
-        </table>
+        <div className="wrapper">
+          <div className="calender_area">
+            <DropDown
+              current={this.state.current}
+              moveMonth={this.moveMonth}/>
+            <Header
+              current={this.state.current}
+              lastMonth={this.moveLastMonth}
+              nextMonth={this.moveNextMonth}
+              moveMonth={this.moveMonth}
+            />
+            <table>
+              <WeeKDays />
+              <WeekList current={this.state.current} />
+            </table>
+          </div>
+          <div className="schedule_area">
+            <h2>2018/9/7の予定</h2>
+            <div>
+              <input type="text" />
+              <input type="time" />
+              <button>登録</button>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>時間</th><th>予定</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>10:00</td>
+                  <td>Bプロジェクト定例会議</td>
+                </tr>
+                <tr>
+                  <td>11:30</td>
+                  <td>移動</td>
+                </tr>
+                <tr>
+                  <td>13:00</td>
+                  <td>XX株式会社打ち合わせ</td>
+                </tr>
+                <tr>
+                  <td>17:00</td>
+                  <td>経営戦略会議</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </React.Fragment>
     )
   }

@@ -3,3 +3,20 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+.wrapper {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.calender_area {
+  background-color: #F00;
+  float: left;
+  width: 40%;
+}
+
+.schedule_area {
+  background-color: #FF0;
+  float: left;
+  width: 60%;
+}
