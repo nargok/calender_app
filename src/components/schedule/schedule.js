@@ -5,13 +5,19 @@ class Schedule extends Component {
   constructor() {
     super()
     const date = new Date()
-    const defaultTime = date.getHours() + ":" + date.getMinutes()
+    const defaultTime = this.getDoubleDigestNumer(date.getHours())
+                      + ":"
+                      + this.getDoubleDigestNumer(date.getMinutes())
     this.state = {
       inputText: "",
       inputTime: defaultTime,
       schedule: [],
       id: 0
     }
+  }
+
+  getDoubleDigestNumer = (number) => {
+    return ("0" + number).slice(-2)
   }
 
   handleInputText = (e) => {
