@@ -10,13 +10,14 @@ import DropDown from './components/dropDown';
 import Header from './components/header/header';
 import WeeKDays from './components/weekDays';
 import WeekList from './components/weekList';
+import Schedule from './components/schedule/schedule';
 
 class Calender extends Component {
   constructor() {
     super()
     this.state = {
       current: new CustomDate(new Date()),
-      selected_date: new CustomDate(new Date())
+      selectedDate: new CustomDate(new Date())
     }
   }
 
@@ -41,7 +42,7 @@ class Calender extends Component {
   }
 
   selectDate = (selectedDate) => {
-    this.setState({ selectDate: selectedDate })
+    this.setState({ selectedDate: selectedDate })
   }
 
   render() {
@@ -68,37 +69,7 @@ class Calender extends Component {
             </table>
           </div>
           <div className="schedule_area">
-            <h2>2018/9/7の予定</h2>
-            <div>
-              <input type="text" />
-              <input type="time" />
-              <button>登録</button>
-            </div>
-            <table>
-              <thead>
-                <tr>
-                  <th>時間</th><th>予定</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>10:00</td>
-                  <td>Bプロジェクト定例会議</td>
-                </tr>
-                <tr>
-                  <td>11:30</td>
-                  <td>移動</td>
-                </tr>
-                <tr>
-                  <td>13:00</td>
-                  <td>XX株式会社打ち合わせ</td>
-                </tr>
-                <tr>
-                  <td>17:00</td>
-                  <td>経営戦略会議</td>
-                </tr>
-              </tbody>
-            </table>
+            <Schedule selectedDate={this.state.selectedDate}/>
           </div>
         </div>
       </React.Fragment>
