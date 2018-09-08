@@ -10,6 +10,9 @@ class CustomDate {
   formatDate(separator = '/') {
     return [this.year, this.month + 1, this.date].join(separator)
   }
+  formatMonth(separator = '/') {
+    return [this.year, this.month + 1].join(separator)
+  }
 }
 
 export default CustomDate;

@@ -1,9 +1,9 @@
-.today_button {
+.this_month_button {
   display: inline-block;
   background-color: rgba(0,0,0,0.04);
 }
 
-.today_button:hover {
+.this_month_button:hover {
   cursor: pointer;
   background-color: rgba(0,0,0,0.1);
 }

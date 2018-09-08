@@ -9,14 +9,14 @@ class Header extends Component {
   }
 
   render() {
-    const currentMonth = this.props.current.formatDate()
+    const currentMonth = this.props.current.formatMonth()
     return (
       // TODOここをinline-blockにする
       <div>
         <div role="button"
-          className="today_button"
+          className="this_month_button"
           onClick={this.handleTodayButton}>
-          今日
+          今月
         </div>
         <h2 className="header">
           <span
