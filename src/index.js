@@ -69,7 +69,7 @@ class Calender extends Component {
             </table>
           </div>
           <div className="schedule_area">
-            <Schedule selectedDate={this.state.selectedDate}/>
+            <Schedule selectedDate={this.state.selectedDate} />
           </div>
         </div>
       </React.Fragment>
