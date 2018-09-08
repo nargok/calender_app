@@ -9,7 +9,8 @@ class Schedule extends Component {
     this.state = {
       inputText: "",
       inputTime: defaultTime,
-      schedule: []
+      schedule: [],
+      id: 0
     }
   }
 
@@ -23,13 +24,22 @@ class Schedule extends Component {
 
   handleRegisterButton = (date) => {
     const item = {
+      id: this.state.id,
       date:date,
       time: this.state.inputTime,
       todo: this.state.inputText
     };
     const schedule = this.state.schedule;
     schedule.push(item);
-    this.setState({ schedule: schedule });
+    this.setState({
+      schedule: schedule,
+      id: this.state.id + 1
+    });
+  }
+
+  handleDeleteButton = (id) => {
+    const newSchedule = this.state.schedule.filter((item) => item.id !== id);
+    this.setState({ schedule: newSchedule });
   }
 
   render() {
@@ -41,6 +51,7 @@ class Schedule extends Component {
         <tr key={index}>
           <td>{schedule.time}</td>
           <td>{schedule.todo}</td>
+          <td><button onClick={() => this.handleDeleteButton(schedule.id)}>削除</button></td>
         </tr>
       )
     })
