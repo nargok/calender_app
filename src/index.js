@@ -15,7 +15,8 @@ class Calender extends Component {
   constructor() {
     super()
     this.state = {
-      current: new CustomDate(new Date())
+      current: new CustomDate(new Date()),
+      selected_date: new CustomDate(new Date())
     }
   }
 
@@ -39,6 +40,10 @@ class Calender extends Component {
     this.moveMonth(currentYear, nextMonth);
   }
 
+  selectDate = (selectedDate) => {
+    this.setState({ selectDate: selectedDate })
+  }
+
   render() {
     return (
       <React.Fragment>
@@ -56,7 +61,10 @@ class Calender extends Component {
             />
             <table>
               <WeeKDays />
-              <WeekList current={this.state.current} />
+              <WeekList
+                current={this.state.current}
+                selectDate={this.selectDate}
+              />
             </table>
           </div>
           <div className="schedule_area">

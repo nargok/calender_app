@@ -29,7 +29,10 @@ class WeekList extends Component {
 
   render() {
     const weekList = _.map(this.getWeekList(), (dateList, index) => {
-      return <DateList key={index} dateList={dateList} />
+      return <DateList
+               key={index}
+               dateList={dateList}
+               selectDate={this.props.selectDate}/>
     })
 
     return (

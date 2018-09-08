@@ -6,7 +6,11 @@ import './dateList.css';
  class DateList extends Component {
   render() {
     const dateList = _.map(this.props.dateList, (date, index) => {
-      return <td key={index} className="date">{date.date}</td>
+      return <td
+               key={index}
+               className="date"
+               onClick={() => this.props.selectDate(date)}>{date.date}
+             </td>
     })
 
     return (
