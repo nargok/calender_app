@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import _ from 'lodash';
 import './index.css';
-import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
 import CustomDate from './components/customDate';
