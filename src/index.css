@@ -4,6 +4,13 @@ body {
   font-family: sans-serif;
 }
 
+h1 {
+  font-size: 60pt;
+  color: #eee;
+  text-align: right;
+  margin: 0px;
+}
+
 .wrapper {
   width: 800px;
   margin: 0 auto;
