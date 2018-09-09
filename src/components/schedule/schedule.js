@@ -57,17 +57,23 @@ class Schedule extends Component {
     const sortedSchedules = _.sortBy(schedules, ['time']);
     const items = sortedSchedules.map((schedule, index) => {
       return (
-        <tr key={index}>
-          <td>{schedule.time}</td>
-          <td>{schedule.todo}</td>
-          <td><button onClick={() => this.handleDeleteButton(schedule.id)}>削除</button></td>
+        <tr key={index} className="schedule_item">
+          <td className="item_time">{schedule.time}</td>
+          <td className="item_todo">{schedule.todo}</td>
+          <td className="item_action">
+            <button
+              className="delete_button"
+              onClick={() => this.handleDeleteButton(schedule.id)}>
+              削除
+            </button>
+          </td>
         </tr>
       )
     })
 
     return (
       <React.Fragment>
-        <h2>{date}の予定</h2>
+        <h3>■予定登録</h3>
         <div>
           <div>
             <input
@@ -92,12 +98,8 @@ class Schedule extends Component {
             </button>
           </div>
         </div>
-        <table>
-          <thead>
-            <tr>
-              <th>時間</th><th>予定</th>
-            </tr>
-          </thead>
+        <h3>■{date}の予定</h3>
+        <table className="schedule_table">
           <tbody>
             {items}
           </tbody>

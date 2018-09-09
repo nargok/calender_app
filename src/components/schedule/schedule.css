@@ -18,3 +18,43 @@
 .input_time {
   width: 100px;
 }
+
+.schedule_table {
+  width: 100%;
+  box-sizing: border-box;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.schedule_table thead {
+  text-align: left;
+}
+
+.schedule_table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.item_time {
+  width: 15%;
+}
+
+.item_action {
+  text-align: right;
+  padding: 0 5px 0 0;
+}
+
+.delete_button {
+  display: inline-block;
+  width: 70px;
+  height: 30px;
+  background-color: #dc3545;
+  border-color: #dc3545;
+  border-radius: 4px;
+  color: #eee;
+  cursor: pointer;
+  margin-bottom: 2px;
+}
+
+.delete_button:hover {
+  opacity: 0.9;
+}
