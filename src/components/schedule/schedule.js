@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import _ from 'lodash';
 
+import '../../index.css';
 import './schedule.css';
 
 class Schedule extends Component {
@@ -84,7 +85,11 @@ class Schedule extends Component {
               required/>
           </div>
           <div>
-            <button onClick={() => this.handleRegisterButton(date)}>登録</button>
+            <button
+              className="button"
+              onClick={() => this.handleRegisterButton(date)}>
+              登録
+            </button>
           </div>
         </div>
         <table>

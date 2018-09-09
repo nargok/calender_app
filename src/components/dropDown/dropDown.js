@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+import '../../index.css';
 import './dropDown.css';
 
 class DropDown extends Component {
@@ -55,6 +57,7 @@ class DropDown extends Component {
     return (
       <div>
         <h3>年月選択</h3>
+        <div>
         <select name="year"
           className="dropdown-select"
           defaultValue={this.props.current.year}
@@ -67,7 +70,14 @@ class DropDown extends Component {
           onChange={this.handleChangeDropdown}>
           {month_items}
         </select>
-        <button onClick={this.handleDisplayButton}>表示</button>
+        </div>
+        <div>
+          <button
+            className="button"
+            onClick={this.handleDisplayButton}>
+            表示
+          </button>
+        </div>
       </div>
     )
   }
