@@ -42,6 +42,10 @@
   width: 15%;
 }
 
+.item_todo {
+  width: 70%;
+}
+
 .item_action {
   text-align: right;
   padding: 0 5px 0 0;
