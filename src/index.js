@@ -60,7 +60,7 @@ class Calender extends Component {
               nextMonth={this.moveNextMonth}
               moveMonth={this.moveMonth}
             />
-            <table>
+            <table className="calender_table">
               <WeeKDays />
               <WeekList
                 current={this.state.current}

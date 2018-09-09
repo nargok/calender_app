@@ -10,7 +10,6 @@ body {
 }
 
 .calender_area {
-  background-color: #F00;
   float: left;
   width: 40%;
 }
@@ -35,4 +34,62 @@ body {
 
 .button:hover {
   opacity: 0.9;
+}
+
+.calender_table {
+  width: 100%;
+  box-sizing: border-box;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid;
+  border-color: gray;
+}
+
+.calender_table thead {
+  border: 1px solid;
+  border-color: gray;
+}
+
+.calender_table th {
+  border-color: gray;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.calender_table th:nth-child(1) {
+  color: #DB1167;
+}
+
+.calender_table th:nth-last-child(1) {
+  color: #4858EA;
+}
+
+.calender_table td {
+  border-color: gray;
+  border-style: solid;
+  border-width: 1px;
+  padding: 2px 4px 15px;
+  vertical-align: top;
+  text-align: right;
+}
+
+.calender_table td:nth-child(1) {
+  background-color: #FEE0EC;
+  color: #DB1167;
+}
+
+.calender_table td:nth-child(1):hover {
+  background-color: orange;
+  color: #FFF;
+}
+
+.calender_table td:nth-last-child(1) {
+  background-color: #DEE6FE;
+  color: #4858EA;
+}
+
+.calender_table td:nth-last-child(1):hover {
+  background-color: orange;
+  color: #FFF;
 }
