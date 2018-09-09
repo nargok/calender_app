@@ -8,7 +8,7 @@ class DropDown extends Component {
     super(props)
     this.state = {
       year: props.current.year,
-      month: null,
+      month: props.current.month + 1,
       maxYear: props.current.year
     }
   }
@@ -51,13 +51,9 @@ class DropDown extends Component {
   }
 
   handleDisplayButton = () => {
-    const year = this.isNull(this.state.year) ? this.props.current.year : this.state.year;
-    const month = this.isNull(this.state.month) ? this.props.current.month : this.state.month - 1;
+    const year = this.state.year;
+    const month = this.state.month - 1;
     this.props.moveMonth(year, month);
-  }
-
-  isNull = (object) => {
-    return (object === null);
   }
 
   prepareMaxYear = (currentYear, selectedYear) => {
