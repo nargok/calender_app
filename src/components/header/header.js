@@ -11,24 +11,23 @@ class Header extends Component {
   render() {
     const currentMonth = this.props.current.formatMonth()
     return (
-      // TODOここをinline-blockにする
       <div>
         <div role="button"
           className="this_month_button"
           onClick={this.handleTodayButton}>
           今月
         </div>
+        <div
+          className="arrow"
+          onClick={this.props.lastMonth}>
+          &lt;
+        </div>
+        <div
+          className="arrow"
+          onClick={this.props.nextMonth}>
+          &gt;
+        </div>
         <h2 className="header">
-          <span
-            className="left-arrow"
-            onClick={this.props.lastMonth}>
-            &lt;
-          </span>
-          <span
-            className="right-arrow"
-            onClick={this.props.nextMonth}>
-            &gt;
-          </span>
            {currentMonth}
         </h2>
       </div>

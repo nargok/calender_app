@@ -1,6 +1,10 @@
 .this_month_button {
   display: inline-block;
   background-color: rgba(0,0,0,0.04);
+  height: 35px;
+  width: 45px;
+  text-align: center;
+  line-height: 35px;
 }
 
 .this_month_button:hover {
@@ -10,14 +14,19 @@
 
 .header {
   display: inline-block;
+  line-height: 35px;
+  vertical-align: middle;
 }
 
-.left-arrow:hover {
-  cursor: pointer;
-  background-color: #ddd;
+.arrow {
+  display: inline-block;
+  height: 35px;
+  width: 45px;
+  text-align: center;
+  line-height: 35px;
 }
 
-.right-arrow:hover {
+.arrow:hover {
   cursor: pointer;
   background-color: #ddd;
 }
