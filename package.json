@@ -17,5 +17,5 @@
     "eject": "react-scripts eject",
     "deploy": "yarn build && gh-pages -d build"
   },
-  "homepage": "https://nargok.github.io/calender"
+  "homepage": "./"
 }
