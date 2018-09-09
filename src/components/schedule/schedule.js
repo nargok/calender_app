@@ -73,7 +73,7 @@ class Schedule extends Component {
 
     return (
       <React.Fragment>
-        <h3>■予定登録</h3>
+        <h3 className="schedule_title">■予定登録</h3>
         <div>
           <div>
             <input
@@ -98,7 +98,7 @@ class Schedule extends Component {
             </button>
           </div>
         </div>
-        <h3>■{date}の予定</h3>
+        <h3 className="schedule_title">■{date}の予定</h3>
         <table className="schedule_table">
           <tbody>
             {items}

@@ -1,3 +1,7 @@
+.schedule_title {
+  background: url(../../images/bg-line.gif);
+}
+
 .input {
   margin: 8px 0;
   display: inline-block;

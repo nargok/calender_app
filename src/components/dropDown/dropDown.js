@@ -56,7 +56,7 @@ class DropDown extends Component {
     
     return (
       <div>
-        <h3>年月選択</h3>
+        <h3 className="calender_title">■年月選択</h3>
         <div>
         <select name="year"
           className="dropdown-select"
