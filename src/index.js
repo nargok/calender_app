@@ -27,18 +27,6 @@ class Calender extends Component {
     this.setState({ current: newDate })
   }
 
-  moveLastMonth = () => {
-    const currentYear = this.state.current.year
-    const prevMonth = this.state.current.month - 1;
-    this.moveMonth(currentYear, prevMonth);
-  }
-
-  moveNextMonth = () => {
-    const currentYear = this.state.current.year
-    const nextMonth = this.state.current.month + 1;
-    this.moveMonth(currentYear, nextMonth);
-  }
-
   selectDate = (selectedDate) => {
     this.setState({ selectedDate: selectedDate })
   }
@@ -54,8 +42,6 @@ class Calender extends Component {
               moveMonth={this.moveMonth}/>
             <Header
               current={this.state.current}
-              lastMonth={this.moveLastMonth}
-              nextMonth={this.moveNextMonth}
               moveMonth={this.moveMonth}
             />
             <table className="calender_table">

@@ -8,6 +8,18 @@ class Header extends Component {
     this.props.moveMonth(date.getFullYear(), date.getMonth());
   }
 
+  moveLastMonth = () => {
+    const currentYear = this.props.current.year
+    const prevMonth = this.props.current.month - 1;
+    this.props.moveMonth(currentYear, prevMonth);
+  }
+
+  moveNextMonth = () => {
+    const currentYear = this.props.current.year
+    const nextMonth = this.props.current.month + 1;
+    this.props.moveMonth(currentYear, nextMonth);
+  }
+
   render() {
     const currentMonth = this.props.current.formatMonth()
     return (
@@ -19,12 +31,12 @@ class Header extends Component {
         </div>
         <div
           className="arrow"
-          onClick={this.props.lastMonth}>
+          onClick={this.moveLastMonth}>
           &lt;
         </div>
         <div
           className="arrow"
-          onClick={this.props.nextMonth}>
+          onClick={this.moveNextMonth}>
           &gt;
         </div>
         <h2 className="header">
