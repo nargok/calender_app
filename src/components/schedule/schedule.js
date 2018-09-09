@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import _ from 'lodash';
 
+import './schedule.css';
+
 class Schedule extends Component {
   constructor() {
     super()
@@ -66,9 +68,24 @@ class Schedule extends Component {
       <React.Fragment>
         <h2>{date}の予定</h2>
         <div>
-          <input type="text" value={this.state.inputText} onChange={this.handleInputText} />
-          <input type="time" value={this.state.inputTime} onChange={this.handleInputTime} required/>
-          <button onClick={() => this.handleRegisterButton(date)}>登録</button>
+          <div>
+            <input
+              className="input input_text"
+              type="text"
+              value={this.state.inputText}
+              onChange={this.handleInputText}
+              placeholder="予定を入力してください"
+            />
+            <input
+              className="input input_time"
+              type="time"
+              value={this.state.inputTime}
+              onChange={this.handleInputTime}
+              required/>
+          </div>
+          <div>
+            <button onClick={() => this.handleRegisterButton(date)}>登録</button>
+          </div>
         </div>
         <table>
           <thead>
