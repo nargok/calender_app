@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './dropDown.css';
 
 class DropDown extends Component {
   constructor() {
@@ -21,7 +22,12 @@ class DropDown extends Component {
 
   generateOptions = (array) => {
     const items = array.map((value, index) => {
-      return <option key={index} value={value}>{value}</option>;
+      return <option
+               className="dropdown_content"
+               key={index}
+               value={value}>
+               {value}
+             </option>;
     })
     return items;
   }
@@ -50,11 +56,13 @@ class DropDown extends Component {
       <div>
         <h3>年月選択</h3>
         <select name="year"
+          className="dropdown-select"
           defaultValue={this.props.current.year}
           onChange={this.handleChangeDropdown}>
           {year_items}
         </select>
         <select name="month"
+          className="dropdown-select"
           defaultValue={this.props.current.month + 1}
           onChange={this.handleChangeDropdown}>
           {month_items}

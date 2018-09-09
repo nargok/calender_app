@@ -20,3 +20,16 @@ body {
   float: left;
   width: 60%;
 }
+
+.dropdown-select {
+  background-color: #e7e9ec;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown_content {
+  color: #111;
+}
