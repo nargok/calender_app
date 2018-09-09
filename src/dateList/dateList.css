@@ -4,3 +4,8 @@
   cursor: pointer;
   color: #FFF;
 }
+
+.today {
+  background-color: #4285f4 !important;
+  color: #FFF !important;
+}
