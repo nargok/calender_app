@@ -7,16 +7,18 @@ body {
 .wrapper {
   width: 800px;
   margin: 0 auto;
+  clear: left;
 }
 
 .calender_area {
   float: left;
-  width: 40%;
+  width: 39%;
 }
 
 .schedule_area {
-  float: left;
+  float: right;
   width: 60%;
+  padding: 1px;
 }
 
 .button {
