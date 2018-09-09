@@ -1,4 +1,4 @@
-# 環境構築手順
+# 動作確認手順
 
 ## ソースコードをクローンする
 ```
@@ -10,6 +10,8 @@ $ cd calender_app
 $ yarn install
 $ yarn start
 ```
-
-## 動作確認
+## ローカルでの動作確認
 ブラウザで、[http://localhost:3000](http://localhost:3000)にアクセスしてください。  
+
+## サンプルページ
+https://nargok.github.io/calender_app/index.html
